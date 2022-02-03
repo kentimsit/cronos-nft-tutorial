@@ -17,7 +17,19 @@ import * as ERC721 from "../artifacts/contracts/MyERC721.sol/MyERC721.json";
 
 // NETWORK CONFIGURATION
 // UNCOMMENT THE RELEVANT NETWORK AND ONLY THE RELEVANT NETWORK
-// Rinkeby (Ethereum testnet)
+// Cronos testnet
+const network = {
+  url: "https://cronos-testnet-3.crypto.org:8545",
+  gasPriceGWei: 5000,
+  blockExplorerPrefix: "https://cronos.crypto.org/explorer/testnet3/tx/",
+};
+// Cronos mainnet
+// const network = {
+//   url: "https://evm-cronos.crypto.org/",
+//   gasPriceGWei: 5000,
+//   blockExplorerPrefix: "https://cronoscan.com/tx/",
+// };
+// Rinkeby (Ethereum testnet) - This is only if you want to try it on Rinkeby
 // const network = {
 //   url:
 //     "https://eth-rinkeby.alchemyapi.io/v2/" +
@@ -25,18 +37,6 @@ import * as ERC721 from "../artifacts/contracts/MyERC721.sol/MyERC721.json";
 //   gasPriceGWei: 2,
 //   blockExplorerPrefix: "https://rinkeby.etherscan.io/tx/",
 // };
-// Cronos testnet
-// const network = {
-//   url: "https://cronos-testnet-3.crypto.org:8545",
-//   gasPriceGWei: 5000,
-//   blockExplorerPrefix: "https://cronos.crypto.org/explorer/testnet3/tx/",
-// };
-// Cronos mainnet
-const network = {
-  url: "https://evm-cronos.crypto.org/",
-  gasPriceGWei: 5000,
-  blockExplorerPrefix: "https://cronoscan.com/tx/",
-};
 
 async function main() {
   prompt.start();
